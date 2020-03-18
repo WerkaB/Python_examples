@@ -14,22 +14,12 @@ def findMin(listOfNestedLists):
 
 minimum = findMin(listOfScoresAndNames)
 array = [lista for lista in listOfScoresAndNames if lista[1] != minimum]
-print("array", array)
 
 newMinimum = findMin(array)
 newArray = [lista for lista in array if lista[1] == newMinimum]
-print("newArray", newArray)
 
 def sortByName(val):
     return val[0]
-
 newArray.sort(key=sortByName)
-print("newArray", newArray)
-
-#----------cudze rozwiązanie--------
-# marksheet = []
-# for _ in range(0,int(input())):
-    # marksheet.append([input(), float(input())])
-
-# second_highest = sorted(list(set([marks for name, marks in marksheet])))[1]
-# print('\n'.join([a for a,b in sorted(marksheet) if b == second_highest]))
+for i in newArray:
+    print(i[0])
